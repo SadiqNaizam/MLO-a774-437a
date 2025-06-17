@@ -52,7 +52,7 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
+				sidebar: { // Unchanged sidebar color configuration
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
 					primary: 'hsl(var(--sidebar-primary))',
@@ -65,9 +65,13 @@ export default {
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				md: 'var(--radius-md)', // Use new md radius variable
+				sm: 'var(--radius-sm)'  // Use new sm radius variable
 			},
+			fontFamily: { // Added font family configuration
+        sans: ['var(--font-sans)'],
+        heading: ['var(--font-heading)'],
+      },
 			keyframes: {
 				'accordion-down': {
 					from: {
